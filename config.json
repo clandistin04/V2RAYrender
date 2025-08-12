@@ -6,16 +6,13 @@
       "settings": {
         "clients": [
           {
-            "id": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
+            "id": "PUT-YOUR-UUID-HERE",
             "alterId": 0
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/v2ray"
-        }
+        "network": "tcp"
       }
     }
   ],
