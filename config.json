@@ -1,7 +1,4 @@
 {
-  "log": {
-    "loglevel": "info"
-  },
   "inbounds": [
     {
       "port": 443,
@@ -16,24 +13,19 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "certificates": [
-            {
-              "certificateFile": "/etc/ssl/certs/cert.pem",
-              "keyFile": "/etc/ssl/private/key.pem"
-            }
-          ]
-        },
         "wsSettings": {
-          "path": "/koki"
+          "path": "/v2ray"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
     }
   ]
 }
