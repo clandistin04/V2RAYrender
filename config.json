@@ -1,79 +1,28 @@
 {
-    "inbounds": [
-        {
-            "listen": "127.0.0.1",
-            "port": 3080,
-            "protocol": "socks",
-            "settings": {
-                "auth": "noauth",
-                "udp": true,
-                "userLevel": 8
-            }
-        },
-        {
-            "listen": "127.0.0.1",
-            "port": 8880,
-            "protocol": "http",
-            "settings": {
-                "userLevel": 8
-            }
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/v2ray"
         }
-    ],
-    "log": {
-        "loglevel": "none"
-    },
-    "outbounds": [
-        {
-            "mux": {
-                "concurrency": 8,
-                "enabled": false
-            },
-            "protocol": "vmess",
-            "settings": {
-                "vnext": [
-                    {
-                        "address": "www.google.com",
-                        "port": 443,
-                        "users": [
-                            {
-                                "alterId": 0,
-                                "id": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
-                                "level": 8,
-                                "security": "chacha20-poly1305"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "tls",
-                "tlsSettings": {
-                    "allowInsecure": true,
-                    "serverName": "google-cloud-run-proxy-866875346105.us-west1.run.app"
-                },
-                "wsSettings": {
-                    "headers": {
-                        "Host": "google-cloud-run-proxy-866875346105.us-west1.run.app"
-                    },
-                    "path": "/dftu0rcb"
-                }
-            }
-        }
-    ],
-    "policy": {
-        "levels": {
-            "8": {
-                "connIdle": 300,
-                "downlinkOnly": 1,
-                "handshake": 4,
-                "uplinkOnly": 1
-            }
-        },
-        "system": {
-            "statsOutboundDownlink": false,
-            "statsOutboundUplink": false
-        }
-    },
-    "stats": {}
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
