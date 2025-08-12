@@ -1,12 +1,12 @@
 {
   "inbounds": [
     {
-      "port": 443,8000,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "PUT-YOUR-UUID-HERE",
+            "id": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
             "alterId": 0
           }
         ]
