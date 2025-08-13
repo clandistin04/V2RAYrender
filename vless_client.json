@@ -1,0 +1,17 @@
+{
+  "configs": [
+    {
+      "tag": "VLESS-Koyeb",
+      "type": "vless",
+      "server": "fancy-nollie-koki22-c43ddd00.koyeb.app",
+      "port": 443,
+      "uuid": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
+      "network": "ws",
+      "tls": true,
+      "servername": "fancy-nollie-koki22-c43ddd00.koyeb.app",
+      "skip-cert-verify": false,
+      "flow": "",
+      "ws-path": "/koki"
+    }
+  ]
+}
