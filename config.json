@@ -21,8 +21,8 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/v2ray/server.crt", // مسار شهادة SSL
-              "keyFile": "/etc/v2ray/server.key" // مسار المفتاح الخاص
+              "certificateFile": "/path/to/server.crt", // مسار شهادة SSL
+              "keyFile": "/path/to/server.key" // مسار المفتاح الخاص
             }
           ],
           "alpn": ["http/1.1"], // محاكاة حركة HTTP عادية
