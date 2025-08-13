@@ -12,7 +12,13 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/koki",
+          "headers": {
+            "Host": "fancy-nollie-koki22-c43ddd00.koyeb.app"
+          }
+        }
       }
     }
   ],
