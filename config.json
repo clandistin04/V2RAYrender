@@ -12,7 +12,17 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": ["http/1.1"],
+          "certificates": [
+            {
+              "certificateFile": "/etc/v2ray/cert.pem",
+              "keyFile": "/etc/v2ray/key.pem"
+            }
+          ]
+        }
       }
     }
   ],
