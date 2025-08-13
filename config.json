@@ -2,21 +2,36 @@
   "inbounds": [
     {
       "port": 443,
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "fb1f46e0-71d5-11f0-b831-205c6d5f5d78",
-            "alterId": 0
+            "id": "a4bf6af2-719d-4991-af10-d6aaa88c3bc1", // نفس UUID المستخدم في العميل
+            "flow": "", // اتركه فارغًا إذا لم تستخدم XTLS
+            "level": 8,
+            "email": "user@server" // اختياري
           }
-        ]
+        ],
+        "decryption": "none", // ضروري لبروتوكول VLESS
+        "fallbacks": [] // يمكن إضافة fallbacks إذا لزم الأمر
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls", // تفعيل TLS
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/etc/v2ray/server.crt", // مسار شهادة SSL
+              "keyFile": "/etc/v2ray/server.key" // مسار المفتاح الخاص
+            }
+          ],
+          "alpn": ["http/1.1"], // محاكاة حركة HTTP عادية
+          "serverName": "fancy-nollie-koki22-c43ddd00.koyeb.app" // نفس Host المستخدم في العميل
+        },
         "wsSettings": {
-          "path": "/koki",
+          "path": "/koki", // نفس المسار المستخدم في العميل
           "headers": {
-            "Host": "fancy-nollie-koki22-c43ddd00.koyeb.app"
+            "Host": "eishan2-3-118642031119.europe-north1.run.app" // نفس Host المستخدم في العميل
           }
         }
       }
@@ -27,5 +42,15 @@
       "protocol": "freedom",
       "settings": {}
     }
-  ]
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    }
+  }
 }
