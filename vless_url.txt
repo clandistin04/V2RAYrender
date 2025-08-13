@@ -1,1 +1,0 @@
-vless://fb1f46e0-71d5-11f0-b831-205c6d5f5d78@fancy-nollie-koki22-c43ddd00.koyeb.app:443?encryption=none&security=tls&type=ws&path=/koki&sni=fancy-nollie-koki22-c43ddd00.koyeb.app&host=fancy-nollie-koki22-c43ddd00.koyeb.app#Koyeb-VLESS
