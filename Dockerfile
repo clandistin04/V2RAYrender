@@ -7,4 +7,4 @@ COPY config.json /etc/v2ray/config.json
 EXPOSE 443
 
 # Start V2Ray
-CMD ["v2ray", "run", "-config", "/etc/v2ray/config.json"]
+CMD ["run", "-config", "/etc/v2ray/config.json"]
